@@ -169,7 +169,7 @@ if(isset($_POST["submi"])){
                                 <hr class="mb-2" />
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <?php $session_id=$_SESSION['aid']; ?>
+                                        <?php $session_id=$row['Firm_Name']; ?>
                                         <h6 class="text-muted fw-bolder">Total Packages</h6>
                                         <?php $query1=mysqli_query($conn,"select * from package_assign where firm_id='$session_id'");
                                             $count2=mysqli_num_rows($query1);
