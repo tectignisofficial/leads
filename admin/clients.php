@@ -169,14 +169,15 @@ if(isset($_POST["submi"])){
                                 <hr class="mb-2" />
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
+                                        <?php $session_id=$_SESSION['aid']; ?>
                                         <h6 class="text-muted fw-bolder">Total Packages</h6>
-                                        <?php $query1=mysqli_query($conn,"select * from package_assign where firm_id='$id'");
+                                        <?php $query1=mysqli_query($conn,"select * from package_assign where firm_id='$session_id'");
                                             $count2=mysqli_num_rows($query1);
                                             ?>
                                         <h3 class="mb-0"><?php echo $count2; ?></h3>
                                     </div>
                                     <div>
-                                    <?php $query=mysqli_query($conn,"select * from lead where Firm_Name='$id'");
+                                    <?php $query=mysqli_query($conn,"select * from lead where Firm_Name='$session_id'");
                                             $count1=mysqli_num_rows($query);
                                             ?>
                                         <h6 class="text-muted fw-bolder">Total Leads</h6>
