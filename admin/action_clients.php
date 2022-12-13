@@ -79,12 +79,12 @@ $hashPassword=password_hash($Password,PASSWORD_BCRYPT);
 
     $sql=mysqli_query($conn,"INSERT INTO `client`( `Firm_Name`, `Authorized_Name`, `Email`, `Mobile_Number`, `Category`, `Password`,  `Date`, `Status`,`image`) VALUES ('$fname','$name','$Email','$Mobile_Number','$Category','$hashPassword','$Date','Activated','$file')");
 
-//     if($sql==1){
-//         echo '<script>alert("data successfully submitted");</script>';
-//         header("location:clients.php");
-//     }else {
-//         echo '<script>alert("oops...somthing went wrong");</script>';
-//     }
+    if($sql==1){
+        echo '<script>alert("data successfully submitted");</script>';
+        header("location:clients.php");
+    }else {
+        echo '<script>alert("oops...somthing went wrong");</script>';
+    }
  
 // }else{
 //   echo "something went wrong";
