@@ -13,7 +13,7 @@ if(isset($_GET['del_id'])){
 <!-- BEGIN: Head-->
 
 <head>
-<base href="https://leads.tectignis.in/admin">
+<base href="https://leads.tectignis.in/admin/">
     <title>View Clients</title>
     <!-- DataTables -->
     <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
